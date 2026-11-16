@@ -1,4 +1,4 @@
-# 📡 I2C Sensor Monitor (Basys3 × 2)
+﻿# 📡 I2C Sensor Monitor (Basys3 × 2)
 
 > Basys3 보드 2개를 I2C로 연결해 온습도·거리 센서 값을 읽고 FND · LED · UART · OLED · Qt GUI로 표시하는 **Verilog RTL 설계 프로젝트**
 
@@ -15,7 +15,7 @@
 
 ## 🎬 동작 영상
 
-[![동작 영상](docs/thumbnail.png)](https://youtu.be/czrs3moHutc)
+[![동작 영상](docs/thumbnail_v2.png)](https://youtu.be/czrs3moHutc)
 
 > ▶️ 이미지를 클릭하면 YouTube에서 재생됩니다 — 거리/온습도 측정 → FND · I2C · UART · OLED 출력 확인
 
