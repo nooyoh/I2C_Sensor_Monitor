@@ -21,7 +21,6 @@
 
 <img width="2470" height="1164" alt="zz" src="https://github.com/user-attachments/assets/16ef89de-5ef5-4433-9e2d-4788a51844d5" />
 
-**Master FSM** : `POWER_WAIT(100ms)` → `OLED_INIT` → `IDLE` ⇄ `SENSOR_READ` → `JUDGE` / `OLED_CMD` → `OLED_DATA`
 
 ## 🛠️ 기술 스택
 
