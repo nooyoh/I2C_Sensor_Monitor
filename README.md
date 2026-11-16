@@ -15,31 +15,11 @@
 
 ## 🎬 동작 영상
 
-<!-- 영상 링크 또는 GIF로 교체 -->
-> 📹 _영상 추가 예정_ — 거리/온습도 측정 → FND 표시 · I2C · UART · OLED 출력 확인
+
 
 ## 🏗️ 시스템 아키텍처
 
-```mermaid
-flowchart LR
-    subgraph SLAVE["Slave Basys3 (I2C 0x42)"]
-        DHT[DHT11<br/>온습도] --> S[측정 · 상태 판정]
-        US[HC-SR04<br/>초음파] --> S
-        S --> SFND[FND 거리 cm]
-        S --> SUART[UART<br/>AA 55 + 6B / 1s]
-    end
-
-    subgraph MASTER["Master Basys3"]
-        SR[sensor_reader<br/>0.2s 주기] --> ARB{i2c_arbiter<br/>센서 우선}
-        OC[oled_controller<br/>0.1s 주기] --> ARB
-        ARB --> IM[i2c_master<br/>100 kHz]
-        SR --> OUT[FND · LED · UART]
-    end
-
-    IM <-->|SDA / SCL| S
-    IM -->|SDA / SCL| OLED[SSD1306 OLED<br/>0x3C 128×32]
-    SUART --> QT[Qt GUI<br/>PC 모니터]
-```
+<img width="2470" height="1164" alt="zz" src="https://github.com/user-attachments/assets/16ef89de-5ef5-4433-9e2d-4788a51844d5" />
 
 **Master FSM** : `POWER_WAIT(100ms)` → `OLED_INIT` → `IDLE` ⇄ `SENSOR_READ` → `JUDGE` / `OLED_CMD` → `OLED_DATA`
 
