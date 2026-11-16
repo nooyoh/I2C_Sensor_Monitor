@@ -15,8 +15,9 @@
 
 ## 🎬 동작 영상
 
-<!-- 영상 링크 또는 GIF로 교체 -->
-> 📹 _영상 추가 예정_ — 거리/온습도 측정 → FND 표시 · I2C · UART · OLED 출력 확인
+[![동작 영상](docs/thumbnail.png)](https://youtu.be/czrs3moHutc)
+
+> ▶️ 이미지를 클릭하면 YouTube에서 재생됩니다 — 거리/온습도 측정 → FND · I2C · UART · OLED 출력 확인
 
 ## 🏗️ 시스템 아키텍처
 
